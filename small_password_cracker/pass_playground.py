@@ -18,8 +18,15 @@ for length in range(1, len(password) + 1):
 end = time.time()
 elapsed = end - start
 
+print()
+print("─" * 40)
 if cracked is not None:
-    print(f"Password cracked in {elapsed:.2f} seconds")
-    print(f"Password is {cracked}")
+    print("  ✓ Password cracked!")
+    print()
+    print(f"  Password:  {cracked}")
+    print(f"  Time:      {elapsed:.2f} seconds")
 else:
-    print(f"Password not found in charset after {elapsed:.2f} seconds")
+    print("  ✗ Password not found in charset")
+    print()
+    print(f"  Time:      {elapsed:.2f} seconds")
+print("─" * 40)
